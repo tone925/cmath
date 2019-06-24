@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>cMath</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- my stylesheet -->
+    <!-- <link rel="stylesheet" href="css/myStyle.css"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <a href="index.html">[Menu]</a>
+
+    <h2>Arches</h2>
+
+    <form>
+      <p>Width<input id="width" type="number" value="48"></input></p>
+      <p>Brow<input id="brow" type="number" value="12"></input></p>
+      <p>Radius<input id="radius" type="number" value=""></input></p>
+
+      <button id="calcButton" type="button">Calculate</button>
+    </form>
+
+    <div class="container">
+      <br>
+      <table id="result" class="table">
+      </table>
+    </div>
+
+    <script type="text/javascript">
+      function archCalcs() {
+        var width=document.getElementById("width").value
+        var brow=document.getElementById("brow").value
+        var radius=document.getElementById("radius").value
+
+        if (width>0 && brow>0 && radius==0) {
+          textCalc="Radius"
+          valueCalc=(brow/2+Math.pow(width,2)/(8*brow)).toFixed(2)
+        }
+        else if (width>0 && brow==0 && radius>0) {
+          textCalc="Brow"
+          valueCalc=(radius-Math.sqrt(Math.pow(radius,2)-Math.pow(width/2,2))).toFixed(2)
+        }
+        else if (width==0 && brow>0 && radius>0) {
+          textCalc="Width"
+          valueCalc=(2*Math.sqrt(2*brow*radius-Math.pow(brow,2))).toFixed(2)
+        }
+        else {
+          textCalc="n/a"
+          valueCalc="n/a"
+          window.alert("Enter measurements into 2 of the 3 boxes")
+        }
+
+        var result=document.getElementById("result")
+        result.innerHTML="<tbody><tr><td>"+textCalc+"</td><td>"+valueCalc+"</td></tr></tbody>"
+      }
+      var calcButton=document.getElementById("calcButton")
+      calcButton.addEventListener("click", archCalcs)
+    </script>
+  </body>
+</html>

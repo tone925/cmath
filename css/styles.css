@@ -1,0 +1,9 @@
+/* use css only if bootstrap does not provide a solution */
+
+.divWidth {
+  max-width:18rem;
+}
+
+.imageWidth {
+  width:98%;
+}

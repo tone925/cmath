@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>cMath</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- my stylesheet -->
+    <!-- <link rel="stylesheet" href="css/myStyle.css"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <a href="index.html">[Menu]</a>
+    <a href="jointsDrw.html">[Drawing]</a>
+
+    <h2>Miter & Butt Joints</h2>
+
+    <form>
+      <p>Legs<input id="legs" type="number" value="16.97"></input></p>
+      <p>Base<input id="base" type="number" value="24"></input></p>
+
+      <input id="inside" type="radio" name="corner" value="inside" checked> Inside corner<br>
+      <input id="outside" type="radio" name="corner" value="outside"> Outside corner<br>
+      <br>
+      <button id="formButton" type="button">Calculate</button>
+      <input type="reset">
+    </form>
+
+    <div class="container">
+      <br>
+      <table id="result" class="table-sm table-bordered">
+      </table>
+    </div>
+
+    <script type="text/javascript">
+      function angles() {
+        var legs
+        var base
+        var corner
+        var preAngle
+        var miter
+        var butt
+
+        legs=document.getElementById("legs").value
+        base=document.getElementById("base").value
+
+        if (document.getElementById("inside").checked) {
+          corner="inside"
+        }
+        else {
+          corner="outside"
+        }
+
+        if (legs>0 && base>0) {
+          if (corner=="inside") {
+            preAngle=(Math.asin(base/2/legs)/Math.PI*180)*2
+            miter=(90-preAngle/2).toFixed(1)
+            butt=(Math.abs(90-preAngle)).toFixed(1)
+            miter=miter+"°"
+            butt=butt+"°"
+          }
+          else if (corner=="outside") {
+            preAngle=180-((Math.asin(base/2/legs)/Math.PI*180)*2)
+            miter=(90-preAngle/2).toFixed(1)
+            butt=(Math.abs(90-preAngle)).toFixed(1)
+            miter=miter+"°"
+            butt=butt+"°"
+          }
+        }
+        else {
+          miter="-"
+          butt="-"
+          window.alert("Enter a measurement into each box")
+        }
+
+        var result=document.getElementById("result")
+        result.innerHTML="<thead><tr><th>Miter</th><th>Butt</th></tr></thead><tbody><tr><td>"+miter+"</td><td>"+butt+"</td></tr></tbody>"
+      }
+
+      var formButton=document.getElementById("formButton")
+      formButton.addEventListener("click", angles, false)
+    </script>
+  </body>
+</html>
