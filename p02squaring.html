@@ -48,17 +48,69 @@
 </header>
 <main>
   <div class="container mx-auto titleDiv">
-    <h3>About</h3>
+    <h3>Squaring</h3>
   </div>
-  <div class="container mx-auto inputDiv">
-    <p>cMath is a web app for performing various math calculations used in construction.</p>
-    <p>cMath is not a construction tutorial. It is meant for users who are versed in construction.</p>
-    <p>cMath was created by tone925 on GitHub. The URL is:<p>https://tone925.github.io/cMath/</p>
-    <p>cMath was created for my own use, however, anyone may use it with the understanding that it is a work in progress and may contain errors.</p>
-    <p>There is no guarantee of correctness and no warranty of any kind. Use with caution.</p>
+  <div class="container border border-info rounded mx-auto inputDiv">
+    <h5 class="text-center py-1">Input</h5>
+    <form>
+      <table class="table-sm">
+        <tbody>
+          <tr>
+            <td style="width:4.5rem">Side A</td>
+            <td><input id="sideA" type="number" value="" class="form-control"></input></td>
+          </tr>
+          <tr>
+            <td>Side B</td>
+            <td><input id="sideB" type="number" value="" class="form-control"></input></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-center pt-3 pb-2">
+        <button type="button" class="btn btn-sm btn-primary" id="enterBtn">Enter</button>
+        <button type="reset" class="btn btn-sm btn-primary">Clear</button>
+      </div>
+    </form>
+  </div>
+  <div class="container border border-info rounded mx-auto outputDiv">
+    <h5 class="text-center py-1">Output</h5>
+    <table class="table-sm">
+      <thead>
+        <tr>
+          <th style="width:6rem"></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="result">
+        <!-- inner html displays here -->
+      </tbody>
+    </table>
   </div>
 </main>
 <footer>
+  <div class="container mx-auto text-center drawingDiv">
+    <a href="images/squaring.png">See CAD Drawing</a>
+  </div>
 </footer>
+<script>
+  function calc() {
+    var sideA=document.getElementById("sideA").value
+    var sideB=document.getElementById("sideB").value
+    var diagonal
+
+    if (sideA>0 && sideB>0) {
+      diagonal=Math.sqrt(Math.pow(sideA,2)+Math.pow(sideB,2)).toFixed(2)
+    }
+    else {
+      diagonal="NA"
+      alert("Enter dimensions in both fields")
+    }
+
+    var result=document.getElementById("result")
+    result.innerHTML="<tr><td>Diagonal</td><td>"+diagonal+"</td></tr>"
+  }
+
+  var enterBtn=document.getElementById("enterBtn")
+  enterBtn.addEventListener("click", calc)
+</script>
 </body>
 </html>
