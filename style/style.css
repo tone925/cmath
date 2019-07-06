@@ -1,0 +1,31 @@
+/*
+use css only if bootstrap does not provide a solution
+bootstrap cannot be included in css stylesheets
+css classes cannot be included in other css classes
+use css variables when needed
+*/
+
+:root {
+  --maxWidth: 18rem;
+}
+
+.titleDiv {
+  max-width: var(--maxWidth);
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.inputDiv {
+  max-width: var(--maxWidth);
+  margin-bottom: 1.5rem;
+}
+
+.outputDiv {
+  max-width: var(--maxWidth);
+  margin-bottom: 1rem;
+}
+
+.drawingDiv {
+  max-width: var(--maxWidth);
+  margin-bottom: 1rem;
+}
