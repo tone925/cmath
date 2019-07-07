@@ -16,124 +16,95 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<header>
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">cMath</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="p02squaring.html">Squaring</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="p03joints.html">Miter & Butt Joints</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="p04arches.html">Arches</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="p05roof.html">Roof Framing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="p06piers.html">Piers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="index.html">About</a>
-        </li>
-      </ul>
+
+  <header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+      <a class="navbar-brand" href="#">cMath</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="p02squaring.html">Squaring</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="p03joints.html">Miter & Butt Joints</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="p04arches.html">Arches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="p05roof.html">Roof Framing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="p06piers.html">Piers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container mx-auto css-div-title">
+      <h3>Roof Framing</h3>
     </div>
-  </nav>
-</header>
-<main>
-  <div class="container mx-auto css-div-title">
-    <h3>Roof Framing</h3>
-  </div>
-  <div class="container border border-info rounded mx-auto css-div-input">
-    <h5 class="text-center py-1">Input</h5>
-    <p class="text-center"><i>Enter data in inches only</i></p>
-    <form>
+    <div class="container border border-info rounded mx-auto css-div-input">
+      <h5 class="text-center py-1">Input</h5>
+      <p class="text-center"><i>Enter data in inches only</i></p>
+      <form>
+        <table class="table-sm">
+          <tbody>
+            <tr>
+              <td style="width:10rem">Rise per foot run</td>
+              <td><input id="risePerFtRun" type="number" value="" class="form-control"></input></td>
+            </tr>
+            <tr>
+              <td>Span</td>
+              <td><input id="span" type="number" value="" class="form-control"></input></td>
+            </tr>
+            <tr>
+              <td>Ridge thickness</td>
+              <td><input id="ridgeThk" type="number" value="" class="form-control"></input></td>
+            </tr>
+            <tr>
+              <td>Hip/val thickness</td>
+              <td><input id="hipValThk" type="number" value="" class="form-control"></input></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-center pt-3 pb-2">
+          <button type="button" class="btn btn-sm btn-primary" id="enterBtn">Enter</button>
+          <button type="reset" class="btn btn-sm btn-primary">Clear</button>
+        </div>
+      </form>
+    </div>
+    <div class="container border border-info rounded mx-auto css-div-output">
+      <h5 class="text-center py-1">Output</h5>
       <table class="table-sm">
-        <tbody>
+        <thead>
           <tr>
-            <td style="width:10rem">Rise per foot run</td>
-            <td><input id="risePerFtRun" type="number" value="" class="form-control"></input></td>
+            <th style="width:11rem"></th>
+            <th></th>
           </tr>
-          <tr>
-            <td>Span</td>
-            <td><input id="span" type="number" value="" class="form-control"></input></td>
-          </tr>
-          <tr>
-            <td>Ridge thickness</td>
-            <td><input id="ridgeThk" type="number" value="" class="form-control"></input></td>
-          </tr>
-          <tr>
-            <td>Hip/val thickness</td>
-            <td><input id="hipValThk" type="number" value="" class="form-control"></input></td>
-          </tr>
+        </thead>
+        <tbody id="result">
+          <!-- inner html displays here -->
         </tbody>
       </table>
-      <div class="text-center pt-3 pb-2">
-        <button type="button" class="btn btn-sm btn-primary" id="enterBtn">Enter</button>
-        <button type="reset" class="btn btn-sm btn-primary">Clear</button>
-      </div>
-    </form>
-  </div>
-  <div class="container border border-info rounded mx-auto css-div-output">
-    <h5 class="text-center py-1">Output</h5>
-    <table class="table-sm">
-      <thead>
-        <tr>
-          <th style="width:11rem"></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="result">
-        <!-- inner html displays here -->
-      </tbody>
-    </table>
-  </div>
-</main>
-<footer>
-  <div class="container mx-auto text-center css-div-drawing">
-    <a href="images/squaring.png">See CAD Drawing</a>
-  </div>
-</footer>
-<script>
-  function calc() {
-    var risePerFtRun=document.getElementById("risePerFtRun").value
-    var span=document.getElementById("span").value
-    var ridgeThk=document.getElementById("ridgeThk").value
-    var hipValThk=document.getElementById("hipValThk").value
+    </div>
+  </main>
 
-    var comFactor=(Math.sqrt(Math.pow(risePerFtRun,2)+144)/12).toFixed(4)
-    var comLength=((span-ridgeThk)/2*comFactor).toFixed(2)
-    var hipValFactor=(Math.sqrt(Math.pow(risePerFtRun,2)+288)/12).toFixed(4)
-    var hipValLength=((span-ridgeThk)/2*hipValFactor).toFixed(2)
-    var hipDropVJL=(hipValThk/2/12*risePerFtRun).toFixed(2)
-    var valSeatBevel=(hipValThk/2).toFixed(2)
-    var jackDiff16=(16*comFactor).toFixed(2)
-    var jackDiff24=(24*comFactor).toFixed(2)
-    var comSideCut=(12/comFactor).toFixed(2)
-    var hipValSideCut=(16.97/hipValFactor).toFixed(2)
+  <footer>
+    <div class="container mx-auto text-center css-div-drawing">
+      <a href="images/squaring.png">See CAD Drawing</a>
+    </div>
+  </footer>
 
-    var result=document.getElementById("result")
-    result.innerHTML="<tr><td>Com factor</td><td>"+comFactor+
-      "</td></tr><tr><td>Hip/val factor</td><td>"+hipValFactor+
-      "</td></tr><tr><td>Com length</td><td>"+comLength+"\""+
-      "</td></tr><tr><td>Hip/val length</td><td>"+hipValLength+"\""+
-      "</td></tr><tr><td>Hip drop/val jack lift</td><td>"+hipDropVJL+"\""+
-      "</td></tr><tr><td>Val seat bevel</td><td>"+valSeatBevel+"\""+
-      "</td></tr><tr><td>Jack diff 16\" oc</td><td>"+jackDiff16+"\""+
-      "</td></tr><tr><td>Jack diff 24\" oc</td><td>"+jackDiff24+"\""+
-      "</td></tr><tr><td>Com side cut 12\" @</td><td>"+comSideCut+"\""+
-      "</td></tr><tr><td>Hip/val side cut 12\" @</td><td>"+hipValSideCut+"\""+
-      "</td></tr>"
-  }
+  <script src="js/roof.js"></script>
 
-  var enterBtn=document.getElementById("enterBtn")
-  enterBtn.addEventListener("click", calc)
-</script>
 </body>
 </html>

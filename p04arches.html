@@ -16,117 +16,90 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<header>
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">cMath</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="p02squaring.html">Squaring</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="p03joints.html">Miter & Butt Joints</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="p04arches.html">Arches</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="p05roof.html">Roof Framing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="p06piers.html">Piers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="index.html">About</a>
-        </li>
-      </ul>
+
+  <header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+      <a class="navbar-brand" href="#">cMath</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="p02squaring.html">Squaring</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="p03joints.html">Miter & Butt Joints</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="p04arches.html">Arches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="p05roof.html">Roof Framing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="p06piers.html">Piers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container mx-auto css-div-title">
+      <h3>Arches</h3>
     </div>
-  </nav>
-</header>
-<main>
-  <div class="container mx-auto css-div-title">
-    <h3>Arches</h3>
-  </div>
-  <div class="container border border-info rounded mx-auto css-div-input">
-    <h5 class="text-center py-1">Input</h5>
-    <form>
+    <div class="container border border-info rounded mx-auto css-div-input">
+      <h5 class="text-center py-1">Input</h5>
+      <form>
+        <table class="table-sm">
+          <tbody>
+            <tr>
+              <td style="width:4.5rem">Width</td>
+              <td><input id="width" type="number" value="" class="form-control"></input></td>
+            </tr>
+            <tr>
+              <td>Brow</td>
+              <td><input id="brow" type="number" value="" class="form-control"></input></td>
+            </tr>
+            <tr>
+              <td>Radius</td>
+              <td><input id="radius" type="number" value="" class="form-control"></input></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-center pt-3 pb-2">
+          <button type="button" class="btn btn-sm btn-primary" id="enterBtn">Enter</button>
+          <button type="reset" class="btn btn-sm btn-primary">Clear</button>
+        </div>
+      </form>
+    </div>
+    <div class="container border border-info rounded mx-auto css-div-output">
+      <h5 class="text-center py-1">Output</h5>
       <table class="table-sm">
-        <tbody>
+        <thead>
           <tr>
-            <td style="width:4.5rem">Width</td>
-            <td><input id="width" type="number" value="" class="form-control"></input></td>
+            <th style="width:6rem"></th>
+            <th></th>
           </tr>
-          <tr>
-            <td>Brow</td>
-            <td><input id="brow" type="number" value="" class="form-control"></input></td>
-          </tr>
-          <tr>
-            <td>Radius</td>
-            <td><input id="radius" type="number" value="" class="form-control"></input></td>
-          </tr>
+        </thead>
+        <tbody id="result">
+          <!-- inner html displays here -->
         </tbody>
       </table>
-      <div class="text-center pt-3 pb-2">
-        <button type="button" class="btn btn-sm btn-primary" id="enterBtn">Enter</button>
-        <button type="reset" class="btn btn-sm btn-primary">Clear</button>
-      </div>
-    </form>
-  </div>
-  <div class="container border border-info rounded mx-auto css-div-output">
-    <h5 class="text-center py-1">Output</h5>
-    <table class="table-sm">
-      <thead>
-        <tr>
-          <th style="width:6rem"></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="result">
-        <!-- inner html displays here -->
-      </tbody>
-    </table>
-  </div>
-</main>
-<footer>
-  <div class="container mx-auto text-center css-div-drawing">
-    <a href="images/squaring.png">See CAD Drawing</a>
-  </div>
-</footer>
-<script>
-  function calc() {
-    var width=document.getElementById("width").value
-    var brow=document.getElementById("brow").value
-    var radius=document.getElementById("radius").value
-    var label
-    var value
+    </div>
+  </main>
 
-    if (width>0 && brow>0 && brow<=width/2 && radius==0) {
-      label="Radius"
-      value=(brow/2+Math.pow(width,2)/(8*brow)).toFixed(2)
-    }
-    else if (width>0 && brow==0 && radius>0) {
-      label="Brow"
-      value=(radius-Math.sqrt(Math.pow(radius,2)-Math.pow(width/2,2))).toFixed(2)
-    }
-    else if (width==0 && brow>0 && radius>0) {
-      label="Width"
-      value=(2*Math.sqrt(2*brow*radius-Math.pow(brow,2))).toFixed(2)
-    }
-    else {
-      label="NA"
-      value="NA"
-      alert("Enter dimensions in 2 of the 3 fields\n\nIf the width and brow are specified, then the brow must not be more than half the width")
-    }
+  <footer>
+    <div class="container mx-auto text-center css-div-drawing">
+      <a href="images/squaring.png">See CAD Drawing</a>
+    </div>
+  </footer>
 
-    var result=document.getElementById("result")
-    result.innerHTML="<tr><td>"+label+"</td><td>"+value+"</td></tr>"
-  }
+  <script src="js/arches.js"></script>
 
-  var enterBtn=document.getElementById("enterBtn")
-  enterBtn.addEventListener("click", calc)
-</script>
 </body>
 </html>
