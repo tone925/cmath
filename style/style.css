@@ -3,29 +3,35 @@ use css only if bootstrap does not provide a solution
 bootstrap cannot be included in css stylesheets
 css classes cannot be included in other css classes
 use css variables when needed
+experiment with dart sass
 */
 
 :root {
-  --maxWidth: 18rem;
+  --max-width: 18rem;
 }
 
-.titleDiv {
-  max-width: var(--maxWidth);
+.css-div-title {
+  max-width: var(--max-width);
   margin-top: 5rem;
   margin-bottom: 1rem;
 }
 
-.inputDiv {
-  max-width: var(--maxWidth);
+.css-div-text {
+  max-width: var(--max-width);
   margin-bottom: 1.5rem;
 }
 
-.outputDiv {
-  max-width: var(--maxWidth);
+.css-div-input {
+  max-width: var(--max-width);
+  margin-bottom: 1.5rem;
+}
+
+.css-div-output {
+  max-width: var(--max-width);
   margin-bottom: 1rem;
 }
 
-.drawingDiv {
-  max-width: var(--maxWidth);
+.css-div-drawing {
+  max-width: var(--max-width);
   margin-bottom: 1rem;
 }
