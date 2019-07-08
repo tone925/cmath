@@ -3,7 +3,6 @@ use css only if bootstrap does not provide a solution
 bootstrap cannot be included in css stylesheets
 css classes cannot be included in other css classes
 use css variables when needed
-experiment with dart sass
 */
 
 :root {
