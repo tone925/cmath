@@ -1,5 +1,5 @@
-var enterBtn=document.getElementById("enterBtn")
-enterBtn.addEventListener("click", function() {
+var btn=document.getElementById("btn")
+btn.addEventListener("click", function() {
 
   var risePerFtRun=document.getElementById("risePerFtRun").value
   var span=document.getElementById("span").value

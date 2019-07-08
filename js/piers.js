@@ -1,5 +1,5 @@
-var enterBtn=document.getElementById("enterBtn")
-enterBtn.addEventListener("click", function() {
+var btn=document.getElementById("btn")
+btn.addEventListener("click", function() {
 
   var diameter=document.getElementById("diameter").value
   var depth=document.getElementById("depth").value

@@ -1,5 +1,5 @@
-var enterBtn=document.getElementById("enterBtn")
-enterBtn.addEventListener("click", function() {
+var btn=document.getElementById("btn")
+btn.addEventListener("click", function() {
 
   var sides=document.getElementById("sides").value
   var diagonal=document.getElementById("diagonal").value
