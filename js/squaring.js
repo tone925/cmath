@@ -1,12 +1,12 @@
 var btn=document.getElementById("btn")
 btn.addEventListener("click", function() {
 
-  var sideA=document.getElementById("sideA").value
-  var sideB=document.getElementById("sideB").value
+  var side1=document.getElementById("side1").value
+  var side2=document.getElementById("side2").value
   var diagonal
 
-  if (sideA>0 && sideB>0) {
-    diagonal=Math.sqrt(Math.pow(sideA,2)+Math.pow(sideB,2)).toFixed(2)
+  if (side1>0 && side2>0) {
+    diagonal=Math.sqrt(Math.pow(side1,2)+Math.pow(side2,2)).toFixed(2)
   }
   else {
     diagonal="NA"
