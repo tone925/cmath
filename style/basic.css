@@ -34,3 +34,7 @@ use css variables for a more modular approach
   max-width: var(--max-width);
   margin-bottom: 1rem;
 }
+
+#squaring-input {
+  width: 4.5rem;
+}
