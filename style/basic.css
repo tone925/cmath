@@ -30,7 +30,7 @@ use css variables for a more modular approach
   margin-bottom: 1rem;
 }
 
-.css-div-drawing {
+.css-div-dwg {
   max-width: var(--max-width);
   margin-bottom: 1rem;
 }
