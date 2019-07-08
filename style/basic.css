@@ -35,6 +35,17 @@ use css variables for a more modular approach
   margin-bottom: 1rem;
 }
 
-#joints-input {
-  width: 5rem;
-}
+#arches-input {width: 5rem}
+#arches-output {width: 6rem}
+
+#joints-input {width: 5rem}
+#joints-output {width: 6rem}
+
+#piers-input {width: 5rem}
+#piers-output {width: 6rem}
+
+#roof-input {width: 5rem}
+#roof-output {width: 6rem}
+
+#squaring-input {width: 5rem}
+#squaring-output {width: 6rem}
