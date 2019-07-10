@@ -39,6 +39,6 @@ btn.addEventListener("click", function() {
 
   var result=document.getElementById("result")
   result.innerHTML="<tr><td>Miter</td><td>"+miter+
-  "</td></tr><tr><td>Butt</td><td>"+butt+
-  "</td></tr>"
+    "</td></tr><tr><td>Butt</td><td>"+butt+
+    "</td></tr>"
 })
