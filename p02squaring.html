@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>cMath</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="cMath is a web app for performing various math calculations used in construction">
+  <!-- required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- optional meta tags -->
+  <meta name="author" content="tone925">
+  <meta name="description" content="cMath is a web app for performing various math calculations used in construction.">
   <meta name="keywords" content="construction,carpentry,math,formula,calculate,calculation,square,squaring,miter,mitering,joint,joinery,arch,brow,radius,roof,framing,rafter,ridge,hip,valley,pier">
-  <meta name="author" content="Tone925">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- bootstrap 4.3.1 cdn -->
+  <title>cMath</title>
+  <!-- bootstrap cdn css -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!-- my stylesheet -->
+  <!-- my css -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <header>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
       <a class="navbar-brand" href="#">cMath</a>
@@ -52,13 +50,14 @@
     <div class="container mx-auto css-div-title">
       <h3>Squaring</h3>
     </div>
+
     <div class="container border border-info rounded mx-auto css-div-input">
       <h5 class="text-center py-1">Input</h5>
       <form>
         <table class="table-sm">
           <tbody>
             <tr>
-              <td style="width:4.5rem">Side</td>
+              <td id="css-squaring-input">Side</td>
               <td><input id="side1" type="number" value="" class="form-control"></input></td>
             </tr>
             <tr>
@@ -73,17 +72,17 @@
         </div>
       </form>
     </div>
+
     <div class="container border border-info rounded mx-auto css-div-output">
       <h5 class="text-center py-1">Output</h5>
       <table class="table-sm">
         <thead>
           <tr>
-            <th style="width:6rem"></th>
+            <th id="css-squaring-output"></th>
             <th></th>
           </tr>
         </thead>
         <tbody id="result">
-          <!-- inner html displays here -->
         </tbody>
       </table>
     </div>
@@ -96,6 +95,9 @@
   </footer>
 
   <script src="js/squaring.js"></script>
-
+  <!-- bootstrap cdn js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
