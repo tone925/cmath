@@ -4,7 +4,6 @@ bootstrap cannot be included in css stylesheets
 css classes cannot be included in other css classes
 use css variables for a more modular approach
 */
-
 :root {
   --max-width: 18rem;
 }
@@ -35,17 +34,42 @@ use css variables for a more modular approach
   margin-bottom: 1rem;
 }
 
-#css-arches-input { width: 5rem; }
-#css-arches-output { width: 5rem; }
+#css-arches-input {
+  width: 5rem;
+}
 
-#css-joints-input { width: 6rem; }
-#css-joints-output { width: 5rem; }
+#css-arches-output {
+  width: 5rem;
+}
 
-#css-piers-input { width: 6rem; }
-#css-piers-output { width: 7rem; }
+#css-joints-input {
+  width: 6rem;
+}
 
-#css-roof-input { width: 9rem; }
-#css-roof-output { width: 11rem; }
+#css-joints-output {
+  width: 5rem;
+}
 
-#css-squaring-input { width: 4rem; }
-#css-squaring-output { width: 6rem; }
+#css-piers-input {
+  width: 6rem;
+}
+
+#css-piers-output {
+  width: 7rem;
+}
+
+#css-roof-input {
+  width: 9rem;
+}
+
+#css-roof-output {
+  width: 11rem;
+}
+
+#css-squaring-input {
+  width: 4rem;
+}
+
+#css-squaring-output {
+  width: 6rem;
+}
