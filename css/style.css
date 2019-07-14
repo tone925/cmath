@@ -35,17 +35,17 @@ use css variables for a more modular approach
   margin-bottom: 1rem;
 }
 
-#css-arches-input {width: 5rem}
-#css-arches-output {width: 5rem}
+#css-arches-input { width: 5rem; }
+#css-arches-output { width: 5rem; }
 
-#css-joints-input {width: 6rem}
-#css-joints-output {width: 5rem}
+#css-joints-input { width: 6rem; }
+#css-joints-output { width: 5rem; }
 
-#css-piers-input {width: 6rem}
-#css-piers-output {width: 7rem}
+#css-piers-input { width: 6rem; }
+#css-piers-output { width: 7rem; }
 
-#css-roof-input {width: 9rem}
-#css-roof-output {width: 11rem}
+#css-roof-input { width: 9rem; }
+#css-roof-output { width: 11rem; }
 
-#css-squaring-input {width: 4rem}
-#css-squaring-output {width: 6rem}
+#css-squaring-input { width: 4rem; }
+#css-squaring-output { width: 6rem; }
