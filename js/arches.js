@@ -19,7 +19,7 @@ btn.addEventListener('click', function () {
   } else {
     label = 'NA';
     value = 'NA';
-    alert('Enter dimensions in 2 of the 3 fields\n\n    • If the width and brow are specified, ' +
+    alert('Enter measurements in 2 of the 3 fields\n\n    • If the width and brow are specified, ' +
       'then the brow must not be more than half the width\n    • If the width and radius are ' +
       'specified, then the radius must not be less than half the width\n    • If the brow and ' +
       'radius are specified, then the radius must not be less than the brow');

@@ -9,7 +9,7 @@ btn.addEventListener('click', function () {
     diagonal = Math.sqrt(Math.pow(side1, 2) + Math.pow(side2, 2)).toFixed(2);
   } else {
     diagonal = 'NA';
-    alert('Enter dimensions in both fields');
+    alert('Enter measurements in both fields');
   }
 
   var result = document.getElementById('result');

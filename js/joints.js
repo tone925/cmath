@@ -31,7 +31,7 @@ btn.addEventListener('click', function () {
   } else {
     miter = 'NA';
     butt = 'NA';
-    alert('Enter dimensions in both fields');
+    alert('Enter measurements in both fields');
   }
 
   var result = document.getElementById('result');

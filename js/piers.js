@@ -9,7 +9,7 @@ btn.addEventListener('click', function () {
     cy = (Math.PI * diameter * depth / Math.pow(36, 3)).toFixed(2);
   } else {
     cy = 'NA';
-    alert('Enter dimensions in both fields');
+    alert('Enter measurements in both fields');
   }
 
   var result = document.getElementById('result');
