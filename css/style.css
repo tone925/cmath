@@ -15,7 +15,11 @@ use css variables for a more modular approach
   margin-bottom: 1rem;
 }
 
-.css-div-main {
+.css-div-text {
+  max-width: var(--max-width);
+}
+
+.css-div-calc {
   max-width: var(--max-width);
   margin-bottom: 1.5rem;
   padding-top: 1rem;
