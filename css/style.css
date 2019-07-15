@@ -4,6 +4,7 @@ bootstrap cannot be included in css stylesheets
 css classes cannot be included in other css classes
 use css variables for a more modular approach
 */
+
 :root {
   --max-width: 18rem;
 }
@@ -14,19 +15,11 @@ use css variables for a more modular approach
   margin-bottom: 1rem;
 }
 
-.css-div-text {
+.css-div-main {
   max-width: var(--max-width);
   margin-bottom: 1.5rem;
-}
-
-.css-div-input {
-  max-width: var(--max-width);
-  margin-bottom: 1.5rem;
-}
-
-.css-div-output {
-  max-width: var(--max-width);
-  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .css-div-dwg {
