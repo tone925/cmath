@@ -20,13 +20,13 @@ btn.addEventListener('click', function () {
   var result = document.getElementById('result');
   result.innerHTML = '<tr><td>Com factor</td><td>' + comFactor +
     '</td></tr><tr><td>Hip/val factor</td><td>' + hipValFactor +
-    '</td></tr><tr><td>Com length</td><td>' + comLength + '\'' +
-    '</td></tr><tr><td>Hip/val length</td><td>' + hipValLength + '\'' +
-    '</td></tr><tr><td>Hip drop/val jack lift</td><td>' + hipDropVJL + '\'' +
-    '</td></tr><tr><td>Val seat bevel</td><td>' + valSeatBevel + '\'' +
-    '</td></tr><tr><td>Jack diff 16\' oc</td><td>' + jackDiff16 + '\'' +
-    '</td></tr><tr><td>Jack diff 24\' oc</td><td>' + jackDiff24 + '\'' +
-    '</td></tr><tr><td>Com side cut 12\' @</td><td>' + comSideCut + '\'' +
-    '</td></tr><tr><td>Hip/val side cut 12\' @</td><td>' + hipValSideCut + '\'' +
+    '</td></tr><tr><td>Com length</td><td>' + comLength + '\"' +
+    '</td></tr><tr><td>Hip/val length</td><td>' + hipValLength + '\"' +
+    '</td></tr><tr><td>Hip drop/val jack lift</td><td>' + hipDropVJL + '\"' +
+    '</td></tr><tr><td>Val seat bevel</td><td>' + valSeatBevel + '\"' +
+    '</td></tr><tr><td>Jack diff 16\' oc</td><td>' + jackDiff16 + '\"' +
+    '</td></tr><tr><td>Jack diff 24\' oc</td><td>' + jackDiff24 + '\"' +
+    '</td></tr><tr><td>Com side cut 12\' @</td><td>' + comSideCut + '\"' +
+    '</td></tr><tr><td>Hip/val side cut 12\' @</td><td>' + hipValSideCut + '\"' +
     '</td></tr>';
 });

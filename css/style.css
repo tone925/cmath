@@ -28,7 +28,7 @@ use css variables for a more modular approach
 
 .css-div-dwg {
   max-width: var(--max-width);
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 #css-arches-input {
